@@ -1,0 +1,44 @@
+Hey! An important note here regarding ESLint.
+
+
+
+When you will install developer dependencies, one of them will be eslint-config-prettier. New versions of this package have affected our ESLint configuration.
+
+For that reason, ESLint config must be updated to avoid having a lot of errors (e.g. Unexpected block statement surrounding arrow body and Failed to load config "prettier/react").
+
+Please do that for each project in the course:
+
+1) Open .eslintrc
+
+2) Find the following line:
+
+"extends": ["eslint:recommended", "airbnb", "prettier", "prettier/react"],
+3) Remove "prettier/react" from the list:
+
+"extends": ["eslint:recommended", "airbnb", "prettier"],
+4) Add two more lines to "rules":
+
+  "rules": {
+    ...your...other...rules...here...,
+    "arrow-body-style": [0],
+    "prefer-arrow-callback": [0]
+  }
+5) Save the file and restart the application.
+
+Above will match the latest eslint-config-prettier requirements.
+
+More about the rules:
+
+1) https://eslint.org/docs/rules/arrow-body-style
+
+2) https://eslint.org/docs/rules/prefer-arrow-callback
+
+
+
+More about changes to eslint-config-prettier:
+
+https://github.com/prettier/eslint-config-prettier/blob/main/CHANGELOG.md
+
+
+
+Thank you!
