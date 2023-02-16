@@ -44,6 +44,7 @@ So in the next video right after running npx nano-react-app folderName please do
 
 4) Also in package.json add new resolutions section below "scripts" section:
 ==============================
+
 body {
   padding: 0;
   margin: 0;
