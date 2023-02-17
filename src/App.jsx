@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import Board from "./components/Board.jsx";
 import './styles/root.scss';
+import History from "./components/History.jsx";
+
 import { calculateWinner } from "./helpers.jsx";
 
 const App = () => {
@@ -30,11 +32,16 @@ const App = () => {
     setCurrentMove(prev => prev + 1)
   };
 
+  const moveTo = (move) => {
+    setCurrentMove(move)
+  }
+
   return (
     <div className="app">
       <h1>Welcome to Tic Tac Toe Game!</h1>
       <h2 className="message">{message}</h2>
       <Board board={current.board} handleSquareClick={handleSquareClick} />
+      <History history={history} moveTo={moveTo} />
     </div>
   );
 };
