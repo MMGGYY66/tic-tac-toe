@@ -13,8 +13,10 @@
     "clear": "rimraf dist .parcel-cache"
   },
   "dependencies": {
+    "node-sass": "^8.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.58.2"
   },
   "devDependencies": {
     "babel-preset-nano-react-app": "^0.1.0",
