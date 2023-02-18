@@ -1,6 +1,10 @@
-# Nano React App Default Javascript Template
+# My tic tac toe game
 
 The live link: [tic-tac-toe](https://mohamed-gamil-tictactoe.surge.sh/).
+
+<div align="center">
+  <img src="tictactoe.png" alt="logo" width="190"  height="auto" />
+  <br/>
 
 - `npm start` — This will spawn a development server with a default port of `5173`.
 - `npm run build` — This will output a production build in the `dist` directory.
