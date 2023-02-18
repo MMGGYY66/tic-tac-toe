@@ -57,9 +57,16 @@ const App = () => {
         onClick={() => {
           onNewGame();
         }}
-      className="new-game">
+        className="new-game"
+      >
         START NEW GAME
       </button>
+      <p className="footer">
+        &copy; created by {' '}
+        <a href="https://github.com/MMGGYY66" target="_blank">
+          Mohamed Gamil Eldimardash
+        </a>
+      </p>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );

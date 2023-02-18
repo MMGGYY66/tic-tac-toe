@@ -19,9 +19,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .board {
+  margin-bottom: 26px;
+
   .board-row {
     display: flex;
     flex-direction: row;
@@ -49,4 +52,34 @@ button {
   font-size: 24px;
   font-weight: 700;
   color: white;
+}
+
+.new-game:hover {
+  font-size: 34px;
+  font-weight: 800;
+  color: rgb(232, 225, 36);
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #2d19c4;
+  transition: 1s ease-in-out;
+}
+
+.footer {
+  color: #767171;
+  border-top: 2px solid rgb(107, 100, 100);
+}
+
+.footer a {
+  color: #767171;
+  text-decoration: none;
+}
+
+.footer:hover {
+  color: #570303;
+  text-decoration: dashed;
+  background-color: #c6f186;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 12px;
+  transition: 1s ease-in-out;
 }
