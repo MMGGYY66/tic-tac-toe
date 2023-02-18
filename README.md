@@ -1,6 +1,6 @@
 # Nano React App Default Javascript Template
 
-The live link: [tic-tac-toe](http://willing-acoustics.surge.sh/).
+The live link: [tic-tac-toe](https://mohamed-gamil-tictactoe.surge.sh/).
 
 - `npm start` — This will spawn a development server with a default port of `5173`.
 - `npm run build` — This will output a production build in the `dist` directory.
