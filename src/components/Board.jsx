@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 import Square from "./Square";
 
-const Board = ({board, handleSquareClick}) => {
-  
-  const renderSquarePos = (position) => {
-    return (<Square
-      value={board[position]}
-      onClick={() =>
-        handleSquareClick(position)
-      }
-    />
+const Board = ({ board, handleSquareClick, winningSquares }) => {
+  const renderSquarePos = position => {
+    const isWinningSquares = winningSquares.includes(position);
+    return (
+      <Square
+        value={board[position]}
+        onClick={() => handleSquareClick(position)}
+        isWinningSquares={isWinningSquares}
+      />
     );
   };
 
@@ -31,7 +31,7 @@ const Board = ({board, handleSquareClick}) => {
         {renderSquarePos(8)}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Board;
