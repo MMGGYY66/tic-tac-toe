@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Board from './components/Board.jsx';
 import './styles/root.scss';
-import History from './components/History.jsx';
 import StatusMessage from './components/StatusMessage.jsx';
-
+import History from './components/History.jsx';
 import { calculateWinner } from './helpers.jsx';
 
 const NEW_GAME = [{ board: Array(9).fill(null), isXNext: true }];
@@ -62,12 +61,14 @@ const App = () => {
         START NEW GAME
       </button>
       <p className="footer">
-        &copy; created by {' '}
+        &copy; created by{' '}
         <a href="https://github.com/MMGGYY66" target="_blank">
           Mohamed Gamil Eldimardash
         </a>
       </p>
-      <History history={history} moveTo={moveTo} currentMove={currentMove} />
+      <History history={ history }
+        moveTo={ moveTo }
+        currentMove={ currentMove } />
     </div>
   );
 };
