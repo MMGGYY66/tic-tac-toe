@@ -10,7 +10,9 @@
     "lint": "eslint src/**/*.js",
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
-    "clear": "rimraf dist .parcel-cache"
+      "predeploy": "rm -rf dist && vite build",
+      "deploy": "gh-pages -d dist",
+    "clear": "rimraf dist parcel-cache"
   },
   "dependencies": {
     "node-sass": "^8.0.0",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "babel-preset-nano-react-app": "^0.1.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.8.3",
     "vite": "^3.2.1"
   },
