@@ -57,7 +57,7 @@ const App = () => {
         onClick={() => {
           onNewGame();
         }}
-      >
+      className="new-game">
         START NEW GAME
       </button>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />

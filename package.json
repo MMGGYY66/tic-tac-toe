@@ -11,7 +11,7 @@
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
       "predeploy": "rm -rf dist && vite build",
-      "deploy": "gh-pages -d dist",
+      "deploy": "gh-pages -d build",
     "clear": "rimraf dist parcel-cache"
   },
     "homepage": "https://MMGGYY66.github.io/ tic-tac-toe/",
