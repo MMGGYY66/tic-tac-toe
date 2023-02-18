@@ -1,20 +1,22 @@
-import React, {useState} from "react";
-import Board from "./components/Board.jsx";
+import React, { useState } from 'react';
+import Board from './components/Board.jsx';
 import './styles/root.scss';
-import History from "./components/History.jsx";
+import History from './components/History.jsx';
+import StatusMessage from './components/StatusMessage.jsx';
 
-import { calculateWinner } from "./helpers.jsx";
+import { calculateWinner } from './helpers.jsx';
 
 const App = () => {
-  const [history, setHistory] = useState([{board: Array(9).fill(null), isXNext: true}]);
+  const [history, setHistory] = useState([
+    { board: Array(9).fill(null), isXNext: true },
+  ]);
   const [currentMove, setCurrentMove] = useState(0);
 
   const current = history[currentMove];
 
   const winner = calculateWinner(current.board);
-  let message = winner ? `Winner is ${winner}` : `Next player is ${current.isXNext ? 'X' : 'O'}`;
 
-  const handleSquareClick = (position) => {
+  const handleSquareClick = position => {
     if (current.board[position] || winner) {
       return;
     }
@@ -29,19 +31,20 @@ const App = () => {
       });
       return prev.concat({ board: newBoard, isXNext: !last.isXNext });
     });
-    setCurrentMove(prev => prev + 1)
+    setCurrentMove(prev => prev + 1);
   };
 
-  const moveTo = (move) => {
-    setCurrentMove(move)
-  }
+  const moveTo = move => {
+    setCurrentMove(move);
+  };
 
   return (
     <div className="app">
-      <h1>Welcome to Tic Tac Toe Game!</h1>
-      <h2 className="message">{message}</h2>
+      <h1>Tic Tac Toe Game!</h1>
+      <StatusMessage winner={winner} current={current } />
       <Board board={current.board} handleSquareClick={handleSquareClick} />
-      <History history={history} moveTo={moveTo} />
+
+      <History history={history} moveTo={moveTo} currentMove={currentMove} />
     </div>
   );
 };
