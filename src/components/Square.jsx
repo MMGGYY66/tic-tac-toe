@@ -7,7 +7,7 @@ const Square = ({ value, onClick, isWinningSquares }) => {
       className="square"
       onClick={onClick}
       style={{
-        backgroundColor: isWinningSquares ? 'yellow' : 'green',
+        backgroundColor: isWinningSquares ? 'yellow' : 'lightgreen',
       }}
     >
       {value}
